@@ -1,0 +1,69 @@
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+
+void insertionsort(vector<int>& vektor) {
+
+    int n = vektor.size();
+
+    int key, j;
+
+    for (int i = 1; i < n; i++) {
+
+        key = vektor[i];
+
+        j = i - 1;
+
+        while (j >= 0 && vektor[j] > key) {
+
+            vektor[j+1] = vektor[j];
+
+            j--;
+
+        }
+
+        vektor[j+1] = key;
+
+    }
+
+}
+
+int main() {
+
+    vector<int> vektor;
+
+    int n;
+
+    cout << "Banyak Angka yg Diinput: ";
+
+    cin >> n;
+
+    cout << "Angka-angka yang diinput: ";
+
+    for (int i = 0; i < n; i++) {
+
+        int x;
+
+        cin >> x;
+
+        vektor.push_back(x);
+
+    }
+
+    insertionsort(vektor);
+
+    cout << "Output: ";
+
+    for (int i = 0; i < vektor.size(); i++) {
+
+        cout << vektor[i] << " ";
+
+    }
+
+    cout << endl;
+
+    return 0;
+
+}
