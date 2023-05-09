@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void freq(vector<int> nums, int target) 
+    {
+        int k = 0;
+        for(auto x : nums)
+            {
+            if(x == target )
+                {
+                    k++;
+                    continue;
+                }
+            
+            }
+                 cout<<"frekuensi dari "<< target <<" adalah "<< k;
+    }
+
+
+int main(){
+    vector <int> arr = {5,1,4,3,7,0,5,0};
+     freq(arr, 1);
+}
