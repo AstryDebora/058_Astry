@@ -1,0 +1,20 @@
+#include <vector>
+#include <iostream>
+#include <algorithm>
+
+void print(const std::vector<int> &arr){
+    for (const auto & i : arr){
+        std::cout << i <<" ";
+    }
+    std::cout <<"\n";
+}
+
+int main() {
+    std::vector<int> arr{1, 1, 1, 7, 7, 4, 3, 8, 9, 2, 3};    
+    print(arr);
+
+    std::sort( arr.begin(), arr.end() );
+    arr.erase( std::unique( arr.begin(), arr.end() ), arr.end() );
+
+    print(arr);
+}
